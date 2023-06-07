@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-     class_name = 'DEVOPS'   
+     class_name = 'AWS'   
     }
 
     stages {
@@ -19,8 +19,8 @@ pipeline {
     }
    
     post { 
-        fixed { 
-            echo 'job is fixed'
+        changed { 
+            echo 'job is changed'
         }
     }
 }
