@@ -19,8 +19,8 @@ pipeline {
     }
    
     post { 
-        failure { 
-            echo 'job is aborted'
+        fixed { 
+            echo 'job is fixed'
         }
     }
 }
