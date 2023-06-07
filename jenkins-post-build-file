@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    environment {
+     class_name = 'DEVOPS'   
+    }
+
+    stages {
+        stage('printing variables') {
+            input {
+                message "should I continue or abort here"
+                ok "yes we can"
+            }
+            steps {
+                sh '''
+                echo "This is user defined global variable ${class_name}"
+                '''
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+    }
+}
