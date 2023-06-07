@@ -1,18 +1,18 @@
 pipeline {
     agent any
     environment {
-     class_name = 'AWS'   
+     place_name = 'MAHARASHTRA'   
     }
 
     stages {
-        stage('printing variables') {
+        stage('staged variables') {
             input {
                 message "should I continue or abort here"
                 ok "yes we can"
             }
             steps {
                 sh '''
-                echo "This is user defined global variable ${class_name}"
+                echo "This is user defined global variable ${place_name}"
                 '''
             }
         }
