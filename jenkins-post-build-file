@@ -22,4 +22,19 @@ pipeline {
             echo 'I will always say Hello again!'
         }
     }
+    post { 
+        aborted { 
+            echo 'job is aborted'
+        }
+    }
+    post { 
+        failure { 
+            echo 'job is fail'
+        }
+    }
+    post { 
+        success { 
+            echo 'job is successful'
+        }
+    }
 }
